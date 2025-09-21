@@ -1,12 +1,9 @@
 'use client';
 
-import { useState } from 'react';
 import Image from 'next/image';
 import { useLenis } from '../hooks/useLenis';
 
 export default function Home() {
-  const [activeProject, setActiveProject] = useState(0);
-
   // Initialize Lenis smooth scrolling
   useLenis();
 
@@ -114,7 +111,7 @@ export default function Home() {
                 href="#contact"
                 className="px-8 py-4 border border-white/30 hover:bg-white/10 text-white rounded-full font-semibold transition-all duration-300"
               >
-                Let's Connect
+                Let&apos;s Connect
               </a>
             </div>
           </div>
@@ -127,7 +124,7 @@ export default function Home() {
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">About Me</h2>
             <p className="text-lg text-slate-300 max-w-3xl mx-auto">
-              I'm a passionate full-stack web developer with 7+ years of experience building scalable applications.
+              I&apos;m a passionate full-stack web developer with 7+ years of experience building scalable applications.
               I specialize in Node.js, React.js, Next.js, and PostgreSQL, creating innovative solutions across diverse
               industries including energy, design, analytics, and interactive media.
             </p>
@@ -169,8 +166,7 @@ export default function Home() {
             {projects.map((project, index) => (
               <div
                 key={index}
-                className="group bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 hover:bg-slate-700/50 transition-all duration-300 transform hover:scale-105 cursor-pointer border border-slate-700/50"
-                onClick={() => setActiveProject(index)}
+                className="group bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 hover:bg-slate-700/50 transition-all duration-300 transform hover:scale-105 border border-slate-700/50"
               >
                 <div className="flex justify-between items-start mb-4">
                   <div>
@@ -377,7 +373,7 @@ export default function Home() {
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">Ready to Start Your Project?</h2>
           <p className="text-xl text-slate-300 mb-12 max-w-2xl mx-auto">
-            Let's discuss how I can help bring your ideas to life with cutting-edge technology and exceptional user experiences.
+            Let&apos;s discuss how I can help bring your ideas to life with cutting-edge technology and exceptional user experiences.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

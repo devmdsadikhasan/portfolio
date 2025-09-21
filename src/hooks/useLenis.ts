@@ -1,7 +1,13 @@
 import { useEffect, useRef } from 'react';
 
+interface LenisInstance {
+  raf: (time: number) => void;
+  scrollTo: (target: string | number | HTMLElement, options?: { offset?: number; duration?: number }) => void;
+  destroy: () => void;
+}
+
 export function useLenis() {
-  const lenisRef = useRef<any>(null);
+  const lenisRef = useRef<LenisInstance | null>(null);
 
   useEffect(() => {
     // Only run on client side
@@ -35,7 +41,7 @@ export function useLenis() {
 
           if (href?.startsWith('#')) {
             e.preventDefault();
-            const element = document.querySelector(href);
+            const element = document.querySelector(href) as HTMLElement;
             if (element && lenisRef.current) {
               lenisRef.current.scrollTo(element, {
                 offset: 0,
