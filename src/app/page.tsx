@@ -124,7 +124,7 @@ export default function Home() {
     {
       category: 'FrontEnd Development',
       description: 'Building modern, responsive, and user-friendly interfaces with a strong focus..',
-      skills: ['React.js', 'Next.js', 'TypeScript', 'Tailwind CSS'],
+      skills: ['JavaScript', 'TypeScript', 'React.js', 'Next.js', 'Tailwind CSS'],
       icon: Monitor,
     },
     {
@@ -313,18 +313,58 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right - Image */}
-            <div className="order-1 lg:order-2 lg:col-span-7 relative flex justify-center items-center min-h-[400px] sm:min-h-[500px]">
-              {/* Gradient ellipses behind image */}
-              <div className="absolute bottom-0 left-[10%] w-[250px] h-[250px] rounded-full bg-gradient-to-br from-[#300a96] to-[#6842f7] opacity-50 blur-[80px] pointer-events-none" />
-              <div className="absolute bottom-[10%] right-[20%] w-[250px] h-[250px] rounded-full bg-gradient-to-br from-[#300a96] to-[#6842f7] opacity-50 blur-[80px] pointer-events-none" />
+            {/* Right - Image + Card */}
+            <div className="order-1 lg:order-2 lg:col-span-7 flex flex-col items-center">
+              <div className="relative flex justify-center items-center min-h-[400px] sm:min-h-[500px] w-full">
+                {/* Gradient ellipses behind image */}
+                <div className="absolute bottom-0 left-[10%] w-[250px] h-[250px] rounded-full bg-gradient-to-br from-[#300a96] to-[#6842f7] opacity-50 blur-[80px] pointer-events-none" />
+                <div className="absolute bottom-[10%] right-[20%] w-[250px] h-[250px] rounded-full bg-gradient-to-br from-[#300a96] to-[#6842f7] opacity-50 blur-[80px] pointer-events-none" />
 
-              <div className="relative w-72 h-72 sm:w-96 sm:h-96 rounded-2xl overflow-hidden z-10">
-                <Image src="/jonaed.png" alt="Md Jonaed Hasan" width={500} height={500} className="w-full h-full object-cover" priority />
+                <div className="relative w-72 h-72 sm:w-96 sm:h-96 rounded-2xl overflow-hidden z-10">
+                  <Image src="/jonaed.png" alt="Md Jonaed Hasan" width={500} height={500} className="w-full h-full object-cover" priority />
+                </div>
+
+                {/* Floating Info Card — desktop only */}
+                <div className="hidden md:block absolute top-[5%] right-0 bg-black/30 backdrop-blur-md border border-white/10 rounded-2xl p-5 w-[280px] shadow-2xl z-20">
+                  <ul className="space-y-2 text-xs text-[#cad5e2]">
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#155dfc] mt-0.5">•</span>
+                      <span>8+ Years of Full-Stack Development Experience</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#155dfc] mt-0.5">•</span>
+                      <span>Scalable & High-Performance Web Solutions</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#155dfc] mt-0.5">•</span>
+                      <span>Expertise in Node.js & React.js</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#155dfc] mt-0.5">•</span>
+                      <span>Modern Web Technologies & Clean Architecture</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#155dfc] mt-0.5">•</span>
+                      <span>Responsive, Fast & User-Centric Applications</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#155dfc] mt-0.5">•</span>
+                      <span>Building Reliable Frontend & Backend Systems</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#155dfc] mt-0.5">•</span>
+                      <span>Available for Projects & Collaboration</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#155dfc] mt-0.5">•</span>
+                      <span>Let&apos;s Connect & Build Something Great</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
 
-              {/* Floating Info Card */}
-              <div className="absolute top-[5%] right-[-0.5rem] sm:right-0 bg-black/30 backdrop-blur-md border border-white/10 rounded-2xl p-5 w-[260px] sm:w-[280px] shadow-2xl z-20">
+              {/* Expertise Card — mobile only, directly under image */}
+              <div className="md:hidden mt-6 bg-black/30 backdrop-blur-md border border-white/10 rounded-2xl p-5 w-full max-w-md mx-auto">
                 <ul className="space-y-2 text-xs text-[#cad5e2]">
                   <li className="flex items-start gap-2">
                     <span className="text-[#155dfc] mt-0.5">•</span>
