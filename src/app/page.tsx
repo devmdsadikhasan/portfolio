@@ -16,6 +16,7 @@ import {
   Cloud,
   Zap,
   Clock,
+  Timer,
   MessageCircle,
   Star,
   MapPin,
@@ -189,18 +190,21 @@ export default function Home() {
       desc: 'Quick turnaround times without compromising on quality. Your project will be delivered on schedule.',
       tag: 'On-time, always',
       icon: Clock,
+      chipIcon: Timer,
     },
     {
       title: 'Great Communication',
       desc: 'Regular updates, clear documentation, and responsive communication throughout the project lifecycle.',
       tag: 'Always reachable',
       icon: MessageCircle,
+      chipIcon: MessageCircle,
     },
     {
       title: 'Quality Assured',
       desc: 'Rigorous testing and code review processes ensure robust, scalable, and maintainable solutions.',
       tag: 'Test & review',
       icon: Star,
+      chipIcon: Star,
     },
   ];
 
@@ -305,10 +309,11 @@ export default function Home() {
                 <a
                   href="/CV.pdf"
                   download
-                  className="inline-flex items-center gap-2 px-6 py-3.5 bg-[#0b1522] hover:bg-[#112a36] text-white rounded-full text-base font-medium transition-all border border-white/10"
+                  className="inline-flex items-center gap-2 px-6 py-3.5 bg-transparent hover:bg-white/5 text-white rounded-full text-base font-medium transition-all border border-[#155dfc]/30 hover:border-[#155dfc]/60"
                 >
-                  <Download size={18} />
+                  <Download size={18} className="text-[#155dfc]" />
                   Download CV
+                  <ArrowRight size={16} className="text-[#155dfc]" />
                 </a>
               </div>
             </div>
@@ -622,10 +627,12 @@ export default function Home() {
       </section>
 
       {/* Why Work With Me */}
-      <section className="relative py-20 z-10 overflow-hidden">
+      <section className="relative py-20 z-10 overflow-hidden bg-[#12172f]">
         {/* Decorative ellipses */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1200px] h-[300px] rounded-full bg-[#155dfc] opacity-15 blur-[400px] pointer-events-none" />
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[1200px] h-[300px] rounded-full bg-[#155dfc] opacity-15 blur-[400px] pointer-events-none" />
+        <div className="absolute bottom-10 left-10 w-52 h-52 rounded-full bg-[#155dfc] opacity-20 blur-[100px] pointer-events-none" />
+        <div className="absolute top-1/2 left-1/3 w-96 h-96 rounded-full bg-[#155dfc] opacity-10 blur-[120px] pointer-events-none" />
 
         <div className="max-w-5xl mx-auto px-6 relative z-10">
           <div className="text-center mb-14">
@@ -635,28 +642,79 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
-            {whyItems.map((item, i) => {
-              const Icon = item.icon;
-              return (
-                <div
-                  key={i}
-                  className={`flex items-start gap-4 bg-[#0b1522] rounded-3xl p-6 border border-white/5 ${i === 2 ? 'lg:col-span-2 lg:max-w-2xl lg:mx-auto' : ''}`}
-                >
-                  <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-gradient-to-br from-[#155dfc] to-[#6842f7] flex items-center justify-center flex-shrink-0">
-                    <Icon size={24} className="text-white" />
+          {/* Staggered layout matching Figma */}
+          <div className="flex flex-col lg:grid lg:grid-cols-2 gap-5">
+            {/* Left card — vertically centered on desktop */}
+            <div className="lg:row-span-2 lg:flex lg:items-center">
+              {(() => {
+                const item = whyItems[2];
+                const Icon = item.icon;
+                const ChipIcon = item.chipIcon;
+                return (
+                  <div className="flex items-start gap-4 bg-[#0b1522] rounded-3xl p-6 border border-white/5 w-full">
+                    <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-[#155dfc]/20 flex items-center justify-center flex-shrink-0">
+                      <Icon size={28} className="text-[#155dfc]" />
+                    </div>
+                    <div>
+                      <h3 className="text-base sm:text-lg font-semibold text-white mb-1">{item.title}</h3>
+                      <p className="text-[#cad5e2] text-sm mb-3 leading-relaxed">{item.desc}</p>
+                      <span className="inline-flex items-center gap-1.5 text-xs text-white bg-[#155dfc]/20 px-3 py-1.5 rounded-full">
+                        <ChipIcon size={12} />
+                        {item.tag}
+                      </span>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="text-base sm:text-lg font-semibold text-white mb-1">{item.title}</h3>
-                    <p className="text-[#cad5e2] text-sm mb-3 leading-relaxed">{item.desc}</p>
-                    <span className="inline-flex items-center gap-1.5 text-xs text-[#155dfc] bg-[#155dfc]/10 px-3 py-1.5 rounded-full">
-                      <Zap size={12} />
-                      {item.tag}
-                    </span>
+                );
+              })()}
+            </div>
+
+            {/* Right top card */}
+            <div>
+              {(() => {
+                const item = whyItems[0];
+                const Icon = item.icon;
+                const ChipIcon = item.chipIcon;
+                return (
+                  <div className="flex items-start gap-4 bg-[#0b1522] rounded-3xl p-6 border border-white/5">
+                    <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-[#155dfc]/20 flex items-center justify-center flex-shrink-0">
+                      <Icon size={28} className="text-[#155dfc]" />
+                    </div>
+                    <div>
+                      <h3 className="text-base sm:text-lg font-semibold text-white mb-1">{item.title}</h3>
+                      <p className="text-[#cad5e2] text-sm mb-3 leading-relaxed">{item.desc}</p>
+                      <span className="inline-flex items-center gap-1.5 text-xs text-white bg-[#155dfc]/20 px-3 py-1.5 rounded-full">
+                        <ChipIcon size={12} />
+                        {item.tag}
+                      </span>
+                    </div>
                   </div>
-                </div>
-              );
-            })}
+                );
+              })()}
+            </div>
+
+            {/* Right bottom card */}
+            <div>
+              {(() => {
+                const item = whyItems[1];
+                const Icon = item.icon;
+                const ChipIcon = item.chipIcon;
+                return (
+                  <div className="flex items-start gap-4 bg-[#0b1522] rounded-3xl p-6 border border-white/5">
+                    <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-[#155dfc]/20 flex items-center justify-center flex-shrink-0">
+                      <Icon size={28} className="text-[#155dfc]" />
+                    </div>
+                    <div>
+                      <h3 className="text-base sm:text-lg font-semibold text-white mb-1">{item.title}</h3>
+                      <p className="text-[#cad5e2] text-sm mb-3 leading-relaxed">{item.desc}</p>
+                      <span className="inline-flex items-center gap-1.5 text-xs text-white bg-[#155dfc]/20 px-3 py-1.5 rounded-full">
+                        <ChipIcon size={12} />
+                        {item.tag}
+                      </span>
+                    </div>
+                  </div>
+                );
+              })()}
+            </div>
           </div>
         </div>
       </section>
