@@ -204,7 +204,7 @@ export default function Home() {
                 Start building websites people remember
               </h1>
               <p className="text-[#cad5e2] text-base sm:text-lg lg:text-xl mt-6 max-w-lg leading-relaxed">
-                Full-Stack Web Developer with 8+ years of experience crafting scalable solutions using Node.js, React.js,
+                Full-Stack Web Developer withexperience crafting scalable solutions using Node.js, React.js,
                 and modern web technologies
               </p>
               <div className="flex flex-wrap gap-4 mt-8">
@@ -328,7 +328,7 @@ export default function Home() {
           <div className="text-center mb-14">
             <h2 className="text-2xl sm:text-3xl lg:text-[44px] font-semibold text-white mb-3">About Me</h2>
             <p className="text-[#cad5e2] text-base sm:text-lg lg:text-xl max-w-lg mx-auto">
-              Full-Stack Web Developer with 8+ years of experience building scalable, high-performance web applications.
+              Full-Stack Web Developer with experience building scalable, web applications.
             </p>
           </div>
 
