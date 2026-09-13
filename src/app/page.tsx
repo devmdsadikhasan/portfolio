@@ -218,7 +218,7 @@ export default function Home() {
             className="text-[28px] sm:text-[40px] font-medium text-white tracking-tight"
             style={{ fontFamily: 'var(--font-spectral), ui-serif, Georgia, serif', fontVariant: 'small-caps' }}
           >
-            Jonaed
+            Sadik
           </a>
 
           <div className="hidden md:flex items-center">
@@ -289,7 +289,7 @@ export default function Home() {
             {/* Left */}
             <div className="order-2 lg:order-1 lg:col-span-5">
               <p className="text-3xl sm:text-4xl lg:text-[56px] font-bold bg-gradient-to-r from-[#155dfc] to-white bg-clip-text text-transparent leading-tight">
-                I&apos;m Jonaed Hasan
+                I&apos;m Sadik Hasan
               </p>
               <h1 className="text-3xl sm:text-4xl lg:text-[56px] font-bold text-white leading-tight mt-2">
                 Start building websites people remember
@@ -326,7 +326,7 @@ export default function Home() {
                 <div className="absolute bottom-[10%] right-[20%] w-[250px] h-[250px] rounded-full bg-gradient-to-br from-[#300a96] to-[#6842f7] opacity-50 blur-[80px] pointer-events-none" />
 
                 <div className="relative w-72 h-72 sm:w-96 sm:h-96 rounded-2xl overflow-hidden z-10">
-                  <Image src="/jonaed.png" alt="Md Jonaed Hasan" width={500} height={500} className="w-full h-full object-cover" priority />
+                  <Image src="/Sadik.jpeg" alt="Md Sadik hasan" width={500} height={500} className="w-full h-full object-cover" priority />
                 </div>
 
                 {/* Floating Info Card — desktop only */}

@@ -19,20 +19,20 @@ const spectral = Spectral({
 });
 
 export const metadata: Metadata = {
-  title: "Md Jonaed Hasan - Full-Stack Web Developer",
+  title: "Md Sadik Hasan - Full-Stack Web Developer",
   description: "Experienced full-stack web developer specializing in Node.js, React.js, Next.js, and modern web technologies. Creating innovative solutions across diverse industries.",
   keywords: ["Full-Stack Developer", "Web Developer", "Node.js", "React.js", "Next.js", "TypeScript", "PostgreSQL"],
-  authors: [{ name: "Md Jonaed Hasan" }],
-  creator: "Md Jonaed Hasan",
+  authors: [{ name: "Md Sadik Hasan" }],
+  creator: "Md Sadik Hasan",
   openGraph: {
-    title: "Md Jonaed Hasan - Full-Stack Web Developer",
+    title: "Md Sadik Hasan - Full-Stack Web Developer",
     description: "Crafting innovative digital solutions that drive business growth and enhance user experiences",
     type: "website",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Md Jonaed Hasan - Full-Stack Web Developer",
+    title: "Md Sadik Hasan - Full-Stack Web Developer",
     description: "Crafting innovative digital solutions that drive business growth and enhance user experiences",
   },
 };
