@@ -326,7 +326,7 @@ export default function Home() {
                 <div className="absolute bottom-[10%] right-[20%] w-[250px] h-[250px] rounded-full bg-gradient-to-br from-[#300a96] to-[#6842f7] opacity-50 blur-[80px] pointer-events-none" />
 
                 <div className="relative w-72 h-72 sm:w-96 sm:h-96 rounded-2xl overflow-hidden z-10">
-                  <Image src="/Sadik.jpeg" alt="Md Sadik hasan" width={500} height={500} className="w-full h-full object-cover" priority />
+                  <Image src="/sadik.png" alt="Md Sadik hasan" width={500} height={500} className="w-full h-full object-cover" priority />
                 </div>
 
                 {/* Floating Info Card — desktop only */}
