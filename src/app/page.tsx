@@ -744,14 +744,14 @@ export default function Home() {
 
           <div className="flex flex-wrap justify-center gap-3">
             <a
-              href="mailto:jonaed.workspace@gmail.com"
+              href="mailto:devsadikbd@gmail.com"
               className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#155dfc] hover:bg-[#1050e0] text-white rounded-full text-sm font-medium transition-all"
             >
               <Mail size={16} />
               Get in touch
             </a>
             <a
-              href="https://github.com/jonaed1230"
+              href="https://github.com/devmdsadikhasan"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#0b1522] hover:bg-[#112a36] text-white rounded-full text-sm font-medium transition-all border border-white/10"
@@ -762,7 +762,7 @@ export default function Home() {
               GitHub
             </a>
             <a
-              href="https://linkedin.com/in/jonaed1230"
+              href="https://linkedin.com/in/devmdsadikhasan"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#0b1522] hover:bg-[#112a36] text-white rounded-full text-sm font-medium transition-all border border-white/10"
@@ -773,7 +773,7 @@ export default function Home() {
               LinkedIn
             </a>
             <a
-              href="tel:+8801797890918"
+              href="tel:+8801333099467"
               className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#0b1522] hover:bg-[#112a36] text-white rounded-full text-sm font-medium transition-all border border-white/10"
             >
               <Phone size={16} />
@@ -791,11 +791,11 @@ export default function Home() {
             <div className="flex flex-wrap justify-center gap-6 text-sm text-[#b5b5b5]">
               <span className="flex items-center gap-2">
                 <Phone size={16} className="text-[#155dfc]" />
-                +880 1797890918
+                +880 1333099467
               </span>
               <span className="flex items-center gap-2">
                 <Mail size={16} className="text-[#155dfc]" />
-                jonaed.workspace@gmail.com
+                devsadikbd@gmail.com
               </span>
               <span className="flex items-center gap-2">
                 <MapPin size={16} className="text-[#155dfc]" />
@@ -804,7 +804,7 @@ export default function Home() {
             </div>
           </div>
           <div className="w-full h-px bg-white/10 mb-4" />
-          <p className="text-center text-[#b5b5b5] text-xs">© {new Date().getFullYear()} Md Jonaed Hasan.</p>
+          <p className="text-center text-[#b5b5b5] text-xs">© {new Date().getFullYear()} Md Sadik Hasan.</p>
         </div>
       </footer>
     </div>
