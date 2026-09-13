@@ -14,20 +14,12 @@ import {
   Monitor,
   Server,
   Cloud,
-  Zap,
   Clock,
   Timer,
   MessageCircle,
   Star,
   MapPin,
   ChevronRight,
-  UtensilsCrossed,
-  BarChart3,
-  Palette,
-  TrendingUp,
-  Drama,
-  Trophy,
-  Car,
 } from 'lucide-react';
 
 export default function Home() {
@@ -42,73 +34,34 @@ export default function Home() {
     { label: 'Contact', href: '#contact' },
   ];
 
-  const filters = ['All', 'Web Development', 'Design & Branding', 'App Development', 'Data Analytics'];
+  const filters = ['All', 'Web Development', 'Wordpress'];
 
   const projects = [
     {
-      title: 'Eiraplaza',
-      url: 'https://eiraplaza.com/',
-      description: 'Modern restaurant website for Eira Plaza in Helsinki with online ordering, multilingual support, and comprehensive menu management.',
-      tech: ['Next.js', 'React', 'Clerk Auth', 'TailwindCSS', '+2'],
+      title: 'sickfits',
+      url: 'https://sickfits-sadik.vercel.app/',
+      description: 'A full-stack e-commerce platform featuring dynamic product management, cart functionality, and a secure checkout process.',
+      tech: ['HTML', 'Javascript', 'TailwindCSS', 'Typescript'],
       category: 'Web Development',
-      icon: UtensilsCrossed,
+      icon: Globe,
     },
     {
-      title: 'Enhancivity',
-      url: 'https://enhancivity.com/',
-      description: 'A comprehensive business enhancement platform focusing on productivity optimization and strategic growth solutions.',
-      tech: ['Next.js', 'React', 'TypeScript', 'TailwindCSS'],
+      title: 'Pepper Tree Wellness',
+      url: 'https://peppertreewellness.com/',
+      description: 'A serene, professional web platform for a holistic wellness and hypnotherapy practice, featuring service showcases for EFT tapping and coaching, client testimonials, booking options, and built-in accessibility features.',
+      tech: ['Elementor', 'PHP', 'JavaScript', 'CSS'],
+      category: 'Wordpress',
+      icon: Globe,
+    },
+    {
+      title: 'WhatsApp Pulse Button',
+      url: 'https://whatsapp-button-pulse.vercel.app/',
+      description: 'A responsive, interactive UI component featuring a floating WhatsApp chat widget with a continuous CSS pulse animation to increase user conversion rates.',
+      tech: ['HTML', 'CSS'],
       category: 'Web Development',
-      icon: BarChart3,
+      icon: Globe,
     },
-    {
-      title: 'Wattura',
-      url: 'https://wattura.vercel.app/',
-      description: 'Dutch sustainable energy solutions platform offering EV charging, solar panels, and smart energy systems.',
-      tech: ['Next.js', 'React', 'SEO Optimization', 'TailwindCSS'],
-      category: 'Web Development',
-      icon: Zap,
-    },
-    {
-      title: 'Signature Park',
-      url: 'https://signaturepark.co/',
-      description: 'Professional UX/UI design agency with 350+ global clients and 650+ completed projects.',
-      tech: ['Next.js', 'Design Systems', 'Analytics', '+2'],
-      category: 'Design & Branding',
-      icon: Palette,
-    },
-    {
-      title: 'Synteqs',
-      url: 'https://www.synteqs.com/',
-      description: 'Advanced time series analytics platform for industrial data optimization and predictive maintenance.',
-      tech: ['Next.js', 'Data Analytics', 'Machine Learning', '+2'],
-      category: 'Data Analytics',
-      icon: TrendingUp,
-    },
-    {
-      title: 'Timeless Ticket Tales',
-      url: 'https://timeless-ticket-tales.map-india.org/',
-      description: 'Interactive mobile-exclusive narrative experience with immersive storytelling and rich visual design.',
-      tech: ['Next.js', 'Mobile-First Design', 'Visual Arts', '+2'],
-      category: 'App Development',
-      icon: Drama,
-    },
-    {
-      title: 'Grassroots to Glory',
-      url: 'https://apps.apple.com/us/app/grassroots-to-glory/id6758744829',
-      description: 'A dynamic sports management mobile app that takes users on a journey from amateur beginnings to professional stardom with immersive gameplay.',
-      tech: ['React Native', 'iOS', 'Video Feed', 'In-App Purchases'],
-      category: 'App Development',
-      icon: Trophy,
-    },
-    {
-      title: 'Uparkki',
-      url: 'https://apps.apple.com/us/app/uparkki-smart-parking/id6752344247',
-      description: 'Smart parking solution app that helps users find, reserve, and manage parking spots efficiently with real-time availability and digital payments.',
-      tech: ['React Native', 'iOS', 'Real-time', 'Payment Gateway'],
-      category: 'App Development',
-      icon: Car,
-    },
+   
   ];
 
   const filteredProjects = activeFilter === 'All' ? projects : projects.filter((p) => p.category === activeFilter);
@@ -290,7 +243,7 @@ export default function Home() {
                   <ul className="space-y-2 text-xs text-[#cad5e2]">
                     <li className="flex items-start gap-2">
                       <span className="text-[#155dfc] mt-0.5">•</span>
-                      <span>8+ Years of Full-Stack Development Experience</span>
+                      <span>Full-Stack Development Internship</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-[#155dfc] mt-0.5">•</span>
@@ -329,7 +282,7 @@ export default function Home() {
                 <ul className="space-y-2 text-xs text-[#cad5e2]">
                   <li className="flex items-start gap-2">
                     <span className="text-[#155dfc] mt-0.5">•</span>
-                    <span>8+ Years of Full-Stack Development Experience</span>
+                    <span>Full-Stack Development Internship</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[#155dfc] mt-0.5">•</span>
