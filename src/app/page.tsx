@@ -20,7 +20,6 @@ import {
   MessageCircle,
   Star,
   MapPin,
-  Check,
   ChevronRight,
   UtensilsCrossed,
   BarChart3,
@@ -39,7 +38,6 @@ export default function Home() {
   const navLinks = [
     { label: 'Home', href: '#home' },
     { label: 'About', href: '#about' },
-    { label: 'Services', href: '#services' },
     { label: 'Project', href: '#projects' },
     { label: 'Contact', href: '#contact' },
   ];
@@ -137,50 +135,8 @@ export default function Home() {
     {
       category: 'Cloud & Deployment',
       description: 'Deploying and managing scalable, reliable applications and infrastructure.',
-      skills: ['AWS', 'Heroku', 'Vercel', 'DigitalOcean'],
+      skills: ['Vercel'],
       icon: Cloud,
-    },
-  ];
-
-  const experiences = [
-    {
-      date: 'April 2024 - November 2024',
-      title: 'Full Stack Web Developer',
-      company: 'REDQ Technologies LTD, Dhaka',
-      bullets: [
-        'Developed full-stack applications using Node.js, React.js, and PostgreSQL with dynamic content management systems',
-        'Built an AI-based social media posting platform with advanced automation features',
-        'Optimized legacy codebase, achieving 30% performance improvement',
-        'Led a team of 3 developers to build a next-generation marketing tool',
-      ],
-      tech: ['Next.js', 'React', 'TailwindCSS'],
-      side: 'right' as const,
-    },
-    {
-      date: 'October 2021 - April 2024',
-      title: 'Full Stack Web Developer',
-      company: 'Ingenjörsautomation AB, Sweden',
-      bullets: [
-        'Developed scalable full-stack applications with Node.js, React.js, and PostgreSQL',
-        'Implemented modern development workflows using Git and GitHub for team collaboration',
-        'Optimized web applications for performance, scalability, and security using AJAX and RESTful APIs',
-        'Built RESTful API and GraphQL endpoints using Node.js, Express, and GraphQL-yoga',
-      ],
-      tech: ['Node.js', 'React', 'TailwindCSS'],
-      side: 'left' as const,
-    },
-    {
-      date: 'June 2018 - November 2020',
-      title: 'Junior Frontend Web Developer',
-      company: 'Code Eating Ants, Dhaka',
-      bullets: [
-        'Designed and maintained multiple websites using HTML, CSS, JavaScript, and jQuery',
-        'Developed interactive web page prototypes for rapid functionality demonstration',
-        'Optimized existing web pages for enhanced performance and user experience',
-        'Created comprehensive technical documentation for web development projects',
-      ],
-      tech: ['HTML', 'CSS', 'JavaScript'],
-      side: 'right' as const,
     },
   ];
 
@@ -525,103 +481,6 @@ export default function Home() {
                 </div>
               );
             })}
-          </div>
-        </div>
-      </section>
-
-      {/* Professional Experience */}
-      <section id="services" className="relative py-20 z-10">
-        {/* Subtle side glow */}
-        <div className="absolute top-1/2 -translate-y-1/2 -left-20 w-60 h-[400px] bg-[#155dfc] opacity-10 blur-[300px] rounded-full pointer-events-none" />
-
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-2xl sm:text-3xl lg:text-[44px] font-bold text-white mb-3">Professional Experience</h2>
-            <p className="text-[#cad5e2] text-base sm:text-lg">8+ years of building innovative web solutions for companies worldwide</p>
-          </div>
-
-          <div className="relative">
-            {/* Center line */}
-            <div className="absolute left-1/2 top-2 bottom-2 w-1.5 bg-gradient-to-b from-[#155dfc]/50 via-[#155dfc]/20 to-transparent -translate-x-1/2 hidden md:block rounded-full" />
-
-            {experiences.map((exp, i) => (
-              <div key={i} className="relative mb-14">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
-                  {exp.side === 'right' ? (
-                    <>
-                      <div className="hidden md:flex md:justify-end md:pt-1">
-                        <span className="inline-block px-4 py-2 bg-[#155dfc]/10 text-[#155dfc] text-sm rounded-full border border-[#155dfc]/20">
-                          {exp.date}
-                        </span>
-                      </div>
-                      <div>
-                        <div className="md:hidden mb-3">
-                          <span className="inline-block px-4 py-2 bg-[#155dfc]/10 text-[#155dfc] text-sm rounded-full border border-[#155dfc]/20">
-                            {exp.date}
-                          </span>
-                        </div>
-                        <h3 className="text-base sm:text-lg font-semibold text-white mb-0.5">{exp.title}</h3>
-                        <p className="text-[#155dfc] text-sm mb-3">{exp.company}</p>
-                        <div className="bg-[#0b1522] border border-white/5 rounded-3xl p-5 relative overflow-hidden">
-                          <div className="absolute top-0 right-0 w-32 h-32 bg-[#155dfc] opacity-5 rounded-bl-full" />
-                          <ul className="space-y-2 relative z-10">
-                            {exp.bullets.map((bullet, bi) => (
-                              <li key={bi} className="flex items-start gap-2 text-xs sm:text-sm text-[#cad5e2]">
-                                <Check size={14} className="text-[#155dfc] mt-0.5 flex-shrink-0" />
-                                <span>{bullet}</span>
-                              </li>
-                            ))}
-                          </ul>
-                          <div className="flex flex-wrap gap-2 mt-4 relative z-10">
-                            {exp.tech.map((t) => (
-                              <span key={t} className="px-2.5 py-1 bg-[#112a36] text-[#cad5e2] text-xs rounded-full">
-                                {t}
-                              </span>
-                            ))}
-                          </div>
-                        </div>
-                      </div>
-                    </>
-                  ) : (
-                    <>
-                      <div className="md:text-right">
-                        <div className="md:hidden mb-3">
-                          <span className="inline-block px-4 py-2 bg-[#155dfc]/10 text-[#155dfc] text-sm rounded-full border border-[#155dfc]/20">
-                            {exp.date}
-                          </span>
-                        </div>
-                        <h3 className="text-base sm:text-lg font-semibold text-white mb-0.5">{exp.title}</h3>
-                        <p className="text-[#155dfc] text-sm mb-3">{exp.company}</p>
-                        <div className="bg-[#0b1522] border border-white/5 rounded-3xl p-5 relative overflow-hidden md:text-left">
-                          <div className="absolute top-0 right-0 w-32 h-32 bg-[#155dfc] opacity-5 rounded-bl-full" />
-                          <ul className="space-y-2 relative z-10">
-                            {exp.bullets.map((bullet, bi) => (
-                              <li key={bi} className="flex items-start gap-2 text-xs sm:text-sm text-[#cad5e2]">
-                                <Check size={14} className="text-[#155dfc] mt-0.5 flex-shrink-0" />
-                                <span>{bullet}</span>
-                              </li>
-                            ))}
-                          </ul>
-                          <div className="flex flex-wrap gap-2 mt-4 relative z-10">
-                            {exp.tech.map((t) => (
-                              <span key={t} className="px-2.5 py-1 bg-[#112a36] text-[#cad5e2] text-xs rounded-full">
-                                {t}
-                              </span>
-                            ))}
-                          </div>
-                        </div>
-                      </div>
-                      <div className="hidden md:flex md:pt-1">
-                        <span className="inline-block px-4 py-2 bg-[#155dfc]/10 text-[#155dfc] text-sm rounded-full border border-[#155dfc]/20">
-                          {exp.date}
-                        </span>
-                      </div>
-                    </>
-                  )}
-                </div>
-                <div className="absolute left-1/2 top-1.5 -translate-x-1/2 w-3 h-3 bg-[#155dfc] rounded-full border-2 border-[#021031] hidden md:block" />
-              </div>
-            ))}
           </div>
         </div>
       </section>
